@@ -6,6 +6,7 @@ frontend/.env.local
 frontend/.env.*.local
 /.pnp
 .pnp.js
+frontend/.env*
 
 # FastAPI/Python - backend
 backend/__pycache__/
@@ -13,6 +14,10 @@ backend/*.py[cod]
 backend/*.env
 backend/.env
 backend/db.sqlite3
+# Ignorar bancos SQLite
+backend/*.db
+backend/app/*.db
+
 
 # Root
 .env

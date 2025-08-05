@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - DATABASE_URL=sqlite:///./focusdatabase.db
+    volumes:
+      - ./backend/app/focusdatabase.db:/app/focusdatabase.db
+
+  frontend:
+    depends_on:
+        - backend
+    build:
+      context: ./frontend
+      args:
+        - REACT_APP_API_URL=https://SEU_BACKEND.up.railway.app
+    ports:
+      - "3000:80"

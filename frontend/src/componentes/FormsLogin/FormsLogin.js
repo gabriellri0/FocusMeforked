@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styles from './FormsLogin.module.css';
+import { API_URL } from "../../api.js";
 
 const FormsLogin = () => {
   const { register, handleSubmit, watch } = useForm();
@@ -10,7 +11,7 @@ const FormsLogin = () => {
 
   const onSubmit = async (data) => {
   try {
-    const response = await fetch("http://localhost:8000/login", {
+    const response = await fetch(`${API_URL}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
