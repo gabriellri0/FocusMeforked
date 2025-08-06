@@ -1,9 +1,13 @@
 from openai import OpenAI
 import datetime
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="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",
+    api_key=os.getenv("OPENROUTER_API_KEY"),
 )
 
 def gerar_resposta(messages):
