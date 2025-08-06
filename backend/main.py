@@ -9,6 +9,11 @@ from database.schemas import UserSchema
 from database.database import Base, engine, get_session
 from gerar import gerar_resposta
 
+if __name__ == "main":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000)
+
+
 app = FastAPI()
 
 app.add_middleware(
