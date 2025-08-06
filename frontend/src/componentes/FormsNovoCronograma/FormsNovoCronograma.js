@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import style from './FormsNovoCronograma.module.css'
-import { baseURL }  from '../../api';
+import { baseURL }  from '../api.js';
 
 const FazerFormulario = () => {
   const { register, handleSubmit } = useForm();

@@ -1,7 +1,7 @@
 import './VerCronograma.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { baseURL }  from '../../api';
+import { baseURL }  from '../componentes/api.js';
 
 function VerCronograma() {
   const location = useLocation();
