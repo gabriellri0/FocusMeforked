@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styles from './FormsLogin.module.css';
-import { baseURL }  from './api.js';
+import { baseURL }  from '../../api';
 const FormsLogin = () => {
   const { register, handleSubmit, watch } = useForm();
   const navigate = useNavigate();

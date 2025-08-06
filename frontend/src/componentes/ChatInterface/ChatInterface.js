@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from './ChatInterface.module.css';
-import { baseURL }  from './api.js';
+import { baseURL }  from '../../api';
 
 const ChatInterface = () => {
   const location = useLocation();
