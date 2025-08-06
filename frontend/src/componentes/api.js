@@ -1,5 +1,2 @@
-const isLocalhost = window. location. hostname == "localhost";
+baseURL = "https://focusmeforked-production.up.railway.app"
 
-export const baseURL = isLocalhost
-? "http://localhost:8000/" // Localhost
-: "https://focusmeforked-production.up.railway.app";
