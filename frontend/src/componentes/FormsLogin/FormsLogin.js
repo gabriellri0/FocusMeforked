@@ -80,7 +80,7 @@ const FormsLogin = () => {
               <label className={`${styles.LabelLogin}`}>Senha</label>
               <input
                 className={`${styles.InputsLogin}`}
-                type="senha"
+                type="password"
                 placeholder="Senha"
                 {...register('senha', { required: true })}
               />
