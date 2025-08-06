@@ -1,6 +1,7 @@
 import './VerCronograma.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { baseURL }  from "../api.js";
 
 function VerCronograma() {
   const location = useLocation();
@@ -32,7 +33,7 @@ function VerCronograma() {
     console.log('Enviando cronograma:', cronograma_data);
 
     try {
-      const response = await fetch('http://localhost:8000/salvar-cronograma', {
+      const response = await fetch(`${baseURL}/salvar-cronograma`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
