@@ -1,2 +1,2 @@
-baseURL = "https://focusmeforked-production.up.railway.app"
+baseURL = "https://focusme.up.railway.app/"
 
