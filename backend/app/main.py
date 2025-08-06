@@ -46,6 +46,9 @@ class CronogramaInput(BaseModel):
     descricao: str
     user_id: int
 
+class ChatInput(BaseModel):
+    mensagem: str
+
 # Criar tabelas no banco de dados
 Base.metadata.create_all(bind=engine)
 
@@ -142,4 +145,12 @@ def listar_cronogramas(user_id: int, db: Session = Depends(get_session)):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Usuário não encontrado")
 
     cronogramas = db.query(Cronograma).filter(Cronograma.user_id == user_id).all()
-    return [{"id": cronograma.id, "nome": cronograma.nome, "descricao": cronograma.descricao} for cronograma in cronogramas]
+    return [{"id": c.id, "nome": c.nome, "descricao": c.descricao} for c in cronogramas]
+
+@app.post("/chat")
+def conversar(chat_input: ChatInput):
+    messages = [{"role": "user", "content": chat_input.mensagem}]
+
+    resposta_ia = gerar_resposta(messages)
+
+    return {"resposta": resposta_ia}

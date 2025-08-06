@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  background-color: #5A9AC4;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.Novo {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+p {
+  font-size: small;
+}
+
+.Tit {
+  font-weight: bold;
+  color: #004E7E;
+}
+
+.Caixa-titulo {
+  margin-bottom: 1rem;
+}
+
+.Formulario {
+  width: 80%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  justify-items: center;
+}
+
+h2 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #5A9AC4;
+  text-align: center;
+}

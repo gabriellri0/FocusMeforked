@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input {
+    border-radius: 7px;
+    background-color: #F6EDE8;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    border-radius: 7px;
+    background-color: #F6EDE8;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+label {
+    color: #004E7E;
+    font-weight: 650;
+}
+
+form {
+    display: grid;
+    row-gap: 3vh;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.Caixa-input {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.Caixa-dia {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #F9F9F9;
+    padding: 5px;
+    transition: all 0.8s ease;
+    align-self: start;  
+}
+
+.Grid-dias {
+    width: 57vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3vw;
+    row-gap: 2vh;
+    align-items: start;
+}
+
+
+.Caixa-dia[open] {
+    background-color: #FFF;
+    border-color: #ED5522;
+}
+
+.Caixa-dia summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: #004E7E;
+    padding: 8px;
+    font-size: 1.1rem;
+    list-style: none;
+}
+
+.Caixa-dia summary:hover {
+    color: #ED5522;
+}
+
+
+.Caixa-Domingo {
+    width: 26vw;
+}
+
+.Caixa-botoes-centralizado {
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.Caixa-dia {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #F9F9F9;
+    padding: 5px;
+    transition: all 0.8s ease;
+    align-self: start; 
+}
+
+.Dias {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    row-gap: 1vh;
+    width: 100%;
+}
+
+.Caixa {
+    width: 57vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    margin-top: 2vh;
+}
+
+.botao {
+    margin: auto;
+    background-color: #004E7E;
+    color: #FFFBF5;
+    border-radius: 17px;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: bold;
+    width: 17vw;
+    height: 7vh;
+    transition: background-color 0.2s ease;
+}
+
+.botao:hover {
+    background-color: #F48763;
+}
+
+.botao:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
